@@ -1,0 +1,325 @@
+@font-face {
+  font-family: "DMSans Medium";
+  src: url("/assets/fonts/static/DMSans-Medium.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "DMSans MediumItalic";
+  src: url("/assets/fonts/static/DMSans-MediumItalic.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "DMSans Regular";
+  src: url("/assets/fonts/static/DMSans-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+:root {
+  /* Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  /* Colors */
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+
+  /* Typography */
+  --font-size-paragraph: 18px;
+  --font-size-title: 22px;
+  --font-size-big-title: 34px;
+
+  /* Font */
+  --font-family: "DMSans Regular", sans-serif;
+  --font-family-medium: "DMSans Medium", sans-serif;
+  --font-family-medium-italic: "DMSans MediumItalic", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  max-width: 80%;
+  height: calc(100% - 3rem);
+  margin: 0 auto;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.item {
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+  padding: 1.3rem;
+}
+.item img {
+  object-fit: contain;
+  width: 100%;
+}
+.item-1 {
+  background: var(--purple-500);
+  grid-area: 1 / 2 / 5 / 4;
+  text-align: center;
+  align-content: center;
+}
+
+.item-1 img {
+  width: 50%;
+}
+
+.item-1 p {
+  color: var(--white);
+  font-size: var(--font-size-big-title);
+  font-family: var(--font-family-medium);
+}
+.item-1 p.subtext {
+  color: var(--yellow-100);
+  font-size: var(--font-size-paragraph);
+}
+
+.item-1 p span {
+  color: var(--yellow-500);
+}
+
+.item-7 {
+  background: var(--yellow-100);
+  grid-area: 1 / 1 / 6 / 2;
+  align-content: center;
+}
+.item-7 p,
+.item-8 p {
+  font-size: var(--font-size-title);
+  text-align: left;
+  font-family: var(--font-family-medium);
+  margin: 1rem 0 1rem 0;
+  line-height: 25px;
+}
+
+.item-7 p span {
+  font-family: var(--font-family-medium-italic);
+  color: var(--purple-500);
+}
+
+.item-8 {
+  background: var(--yellow-500);
+  grid-area: 6 / 1 / -1 / 2;
+}
+.item-8 img {
+  max-width: 240px;
+  height: max-content;
+  margin-bottom: 1rem;
+}
+
+.item-2 {
+  grid-area: 5 / 2 / 8 / 3;
+  align-content: baseline;
+  background: var(--white);
+}
+
+.item-2 p {
+  font-family: var(--font-family-medium);
+  font-size: var(--font-size-title);
+}
+
+.item-3 {
+  grid-area: 5 / 3 / 8 / 4;
+  background: var(--yellow-500);
+}
+
+.item-3 p {
+  font-family: var(--font-family-medium);
+  font-size: var(--font-size-paragraph);
+  width: 16ch;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.item-4 {
+  grid-area: 1 / 4 / 8 / 5;
+  background: var(--purple-100);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  padding: 2rem 1rem 1rem 0;
+  gap: 1rem;
+}
+
+.item-4 .title {
+  font-family: var(--font-family-medium);
+  font-size: 24px;
+  padding-left: 2rem;
+}
+.item-4 .subtitle {
+  padding-left: 2rem;
+  font-size: var(--font-size-paragraph);
+}
+.item-4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  box-sizing: content-box;
+  padding-left: 2rem;
+}
+.item-6 {
+  grid-area: 8/2/-1/3;
+  background: white;
+  align-content: center;
+  text-align: left;
+}
+.item-6 .subtitle {
+  font-size: 14px;
+}
+.item-6 .title {
+  margin-top: 1rem;
+  font-size: var(--font-size-big-title);
+}
+.item-6 img {
+  margin: 1rem 0;
+  width: 70%;
+}
+
+.item-5 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 100%;
+  grid-area: 8 / 3 / -1 / -1;
+  background: var(--purple-500);
+  gap: 1rem;
+}
+
+.item-5 img {
+  height: calc(100% - 2rem);
+  width: auto;
+  margin: 1rem 0 1rem 1rem;
+}
+
+.item-5 p {
+  font-size: var(--font-size-big-title);
+  line-height: 30px;
+  color: var(--white);
+  font-family: var(--font-family-medium);
+  align-content: center;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  translate: -50% 0;
+}
+@media (width< 1200px) {
+  .container {
+    max-width: none;
+    padding: 1rem 1rem;
+  }
+}
+@media (width< 900px) {
+  .container {
+    max-width: none;
+    padding: 1rem 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, max-content);
+  }
+  .item {
+    height: 100%;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    grid-area: auto;
+    padding: 1.5rem;
+  }
+
+  .item-3 {
+    padding: 1rem 1rem 0 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .item-3 p {
+    font-size: var(--font-size-big-title);
+  }
+  .item-5 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .item-5 img {
+    width: 100%;
+  }
+  .item-6 .title {
+    font-size: 50px;
+  }
+
+  .attribution {
+    position: relative;
+    grid-column: span 2;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+@media (width< 600px) {
+  .container {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    max-width: 100%;
+    padding-top: 1rem;
+    gap: 0.5rem;
+  }
+  .item {
+    height: 100%;
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    grid-area: auto / 1 / auto / 2;
+    padding: 1.5rem;
+  }
+  .item-2 {
+    padding: 0.7rem;
+  }
+  .item-3 {
+    padding: 0.5rem 6rem 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .item-3 p {
+    margin-top: 0;
+  }
+
+  .item-4 {
+    padding: 1rem;
+    text-align: center;
+  }
+  .item-4 p.title,
+  .item-4 p.subtitle,
+  .item-4 img {
+    padding: 0;
+    padding-left: 0;
+  }
+
+  .item-5 {
+    grid-template-columns: auto;
+    text-align: center;
+    grid-template-rows: auto auto;
+  }
+
+  .item-5 img {
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .item-7 img {
+    width: 150px;
+  }
+  .item-8 img {
+    width: 180px;
+  }
+}
