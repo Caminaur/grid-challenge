@@ -38,15 +38,15 @@
   --font-family-medium: "DMSans Medium", sans-serif;
   --font-family-medium-italic: "DMSans MediumItalic", sans-serif;
 }
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(10, 1fr);
   max-width: 80%;
-  height: calc(100% - 3rem);
+  height: 100%;
   margin: 0 auto;
-  padding-top: 3rem;
-  margin-bottom: 3rem;
+  padding: 3rem 0;
   gap: 2rem;
 }
 
@@ -215,13 +215,12 @@
 @media (width< 1200px) {
   .container {
     max-width: none;
-    padding: 1rem 1rem;
+    padding: 2rem;
   }
 }
 @media (width< 900px) {
   .container {
-    max-width: none;
-    padding: 1rem 1rem;
+    padding: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, max-content);
   }
